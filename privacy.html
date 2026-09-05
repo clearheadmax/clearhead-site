@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Clearhead</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    line-height: 1.6;
+    color: #241A12;
+    background: #FCF9F5;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 40px; border-bottom: 1px solid #F0E4D6; padding-bottom: 8px; }
+  .updated { color: #8F7256; font-size: 14px; margin-bottom: 32px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border: 1px solid #E6D9CC; vertical-align: top; }
+  th { background: #F3EDE6; }
+  a { color: #6B4E36; }
+  footer { margin-top: 56px; font-size: 13px; color: #8F7256; }
+  .back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<a class="back" href="./index.html">&larr; Clearhead</a>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: August 4, 2026</p>
+
+<p>
+  Clearhead ("we", "us", "the app") is a social app that helps people who are sober, sober-curious, or
+  just exploring find each other, discover alcohol-free-friendly venues, and share moments from nights
+  out without the drinks. This policy explains what personal data we collect, why, how it's protected,
+  and the rights you have over it.
+</p>
+
+<h2>1. Who we are</h2>
+<p>
+  Clearhead is operated by <strong>Diserve Ventures Oy</strong>, registered in
+  Espoo, Finland, business ID (Y-tunnus) <strong>2378021-4</strong>. For the purposes of GDPR, we are the
+  <strong>data controller</strong> for the personal data described in this policy.
+</p>
+<p>Contact for privacy questions: <a href="mailto:max@diserve.com">max@diserve.com</a></p>
+
+<h2>2. What data we collect</h2>
+<p>We collect only what the app actually needs to function. Specifically:</p>
+<table>
+  <tr><th>Category</th><th>What's included</th></tr>
+  <tr>
+    <td>Account data</td>
+    <td>Email address, password (stored as a secure hash — we never see or store your actual password), account creation date.</td>
+  </tr>
+  <tr>
+    <td>Profile data</td>
+    <td>Name, age, profile photo, bio, sober-since date (optional), interests, self-identification (sober / sober-curious / exploring), and whether your profile/moments are public or connections-only.</td>
+  </tr>
+  <tr>
+    <td>Location data</td>
+    <td>Your device's GPS coordinates, used to show nearby people and venues, and optionally attached to a Moment you post (or reverse-geocoded into a general area label like "Helsinki, Finland" if you don't tag a specific venue).</td>
+  </tr>
+  <tr>
+    <td>Photos</td>
+    <td>Your profile photo and photos you post as "Moments" (a paired photo of where you are and a selfie), uploaded to our storage provider.</td>
+  </tr>
+  <tr>
+    <td>Social/relationship data</td>
+    <td>Connections between you and other users, events you host or mark interest in, drinks you favorite, venues you save, and community tags you or others apply to venues.</td>
+  </tr>
+  <tr>
+    <td>Content</td>
+    <td>Captions, tags, and comments-equivalent content you post.</td>
+  </tr>
+  <tr>
+    <td>Safety data</td>
+    <td>Accounts you block, and reports you file about other users' content — used only for moderation.</td>
+  </tr>
+  <tr>
+    <td>Device/technical data</td>
+    <td>Basic device information needed to run the app and deliver local notifications (we do not currently use any analytics or crash-reporting SDK — see Section 5).</td>
+  </tr>
+</table>
+
+<h2>3. Why we collect it, and our legal basis</h2>
+<ul>
+  <li><strong>To provide the app's core functionality</strong> (contractual necessity) — your profile, location, and content are the app; without them Discover, Venues, Moments, and Connections don't work.</li>
+  <li><strong>To keep the community safe</strong> (legitimate interest) — blocking and reporting data is used solely for moderation.</li>
+  <li><strong>Where you've given consent</strong> — e.g. granting location permission, or opting into specific notification types, which you can withdraw at any time in Settings or your device's permission settings.</li>
+</ul>
+<p>We do not use your data for advertising, and we do not sell your data to anyone.</p>
+
+<h2>4. How your data is stored and secured</h2>
+<ul>
+  <li>Data is stored with <strong>Supabase</strong>, a managed Postgres database provider. Data is encrypted in transit (TLS) and at rest.</li>
+  <li>Access to your data within our database is enforced with row-level security rules — for example, your private Moments are only readable by you and your accepted connections, never by other users or, in ordinary operation, by us directly querying around those rules.</li>
+  <li>Passwords are never stored in plain text; authentication is handled by Supabase Auth using industry-standard hashing.</li>
+  <li>Our database is hosted in Finland, within the EU/EEA. Because your data doesn't leave the EU/EEA, no international transfer safeguards (such as Standard Contractual Clauses) are needed for this processing.</li>
+</ul>
+
+<h2>5. Third parties we share data with</h2>
+<p>We work with a small number of service providers ("processors") who handle data strictly on our behalf:</p>
+<table>
+  <tr><th>Provider</th><th>What they receive</th><th>Purpose</th></tr>
+  <tr>
+    <td>Supabase</td>
+    <td>All account, profile, and content data described above</td>
+    <td>Database, authentication, and file storage hosting</td>
+  </tr>
+  <tr>
+    <td>Google (Places API)</td>
+    <td>Approximate location coordinates when you browse Venues</td>
+    <td>Finding real nearby bars, cafes, and restaurants</td>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>Standard data collected by any iOS app distribution (device identifiers, crash logs at the OS level)</td>
+    <td>Required for App Store distribution — governed by Apple's own privacy policy</td>
+  </tr>
+</table>
+<p>
+  <strong>We do not currently use any advertising network, analytics SDK, or marketing/tracking tool</strong>
+  (no Google Analytics, Meta/Facebook SDK, Mixpanel, etc. are integrated into the app as of this
+  writing).
+</p>
+
+<h2>6. Data retention</h2>
+<p>
+  We retain your data for as long as your account is active. You can permanently delete your account and
+  all associated data at any time from Profile → Settings → Delete account in the app. This removes your
+  profile, Moments, connections, favorites, and photos immediately, except where we're required to retain
+  something longer for legal reasons (e.g. active safety reports under investigation).
+</p>
+
+<h2>7. Your rights under GDPR</h2>
+<p>As an EU/EEA resident (or resident of a jurisdiction with similar protections), you have the right to:</p>
+<ul>
+  <li><strong>Access</strong> the personal data we hold about you</li>
+  <li><strong>Rectify</strong> inaccurate data (most of this you can already edit directly in your Profile)</li>
+  <li><strong>Erase</strong> your data ("right to be forgotten")</li>
+  <li><strong>Restrict or object to</strong> certain processing</li>
+  <li><strong>Data portability</strong> — receive your data in a structured, machine-readable format</li>
+  <li><strong>Withdraw consent</strong> at any time, where processing is based on consent</li>
+  <li><strong>Lodge a complaint</strong> with your national data protection authority — in Finland, this is
+    the <a href="https://tietosuoja.fi" target="_blank" rel="noopener">Office of the Data Protection
+    Ombudsman (Tietosuojavaltuutetun toimisto)</a></li>
+</ul>
+<p>To exercise any of these rights, contact us at <a href="mailto:max@diserve.com">max@diserve.com</a>.</p>
+
+<h2>8. Children's privacy</h2>
+<p>
+  Clearhead is not intended for anyone under 18 years old. We do not knowingly collect data from children
+  under this age. If you believe a child has created an account, contact us and we will remove it.
+</p>
+
+<h2>9. Changes to this policy</h2>
+<p>
+  If we make material changes to this policy, we'll notify you in the app before the changes take effect.
+  Continued use of the app after that point means you accept the updated policy.
+</p>
+
+<h2>10. Contact us</h2>
+<p>
+  Questions about this policy or your data: <a href="mailto:max@diserve.com">max@diserve.com</a><br />
+  Postal address: Diserve Ventures Oy, Westendinkuja 5b, Espoo, Finland
+</p>
+
+<footer>Clearhead — Privacy Policy.</footer>
+
+</body>
+</html>
