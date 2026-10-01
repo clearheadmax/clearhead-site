@@ -61,11 +61,11 @@
   </tr>
   <tr>
     <td>Profile data</td>
-    <td>Name, age, profile photo, bio, sober-since date (optional), interests, self-identification (sober / sober-curious / exploring), and whether your profile/moments are public or connections-only.</td>
+    <td>Name, age, profile photo, bio, sober-since date (optional), interests, self-identification (sober / sober-curious / exploring), and whether your Moments are public or connections-only.</td>
   </tr>
   <tr>
     <td>Location data</td>
-    <td>Your device's GPS coordinates, used to show nearby people and venues, and optionally attached to a Moment you post (or reverse-geocoded into a general area label like "Helsinki, Finland" if you don't tag a specific venue).</td>
+    <td>Your device's location, used to show nearby people and venues. Before it leaves your device it is rounded to an approximate location (about 1 km). We store only this approximate location on your profile and on Moments you post, and a Moment may also show a general area label like "Helsinki, Finland" if you don't tag a specific venue. Other users can see roughly how far away you are, never your exact location.</td>
   </tr>
   <tr>
     <td>Photos</td>
@@ -116,13 +116,23 @@
   </tr>
   <tr>
     <td>Google (Places API)</td>
-    <td>Approximate location coordinates when you browse Venues</td>
+    <td>Approximate location (about 1 km) and any search text when you browse or search Venues</td>
     <td>Finding real nearby bars, cafes, and restaurants</td>
   </tr>
   <tr>
+    <td>Open Food Facts</td>
+    <td>Drink search text and your country name — no account details or personal identifiers</td>
+    <td>Looking up non-alcoholic drink products and photos sold in your country</td>
+  </tr>
+  <tr>
+    <td>UI Avatars (ui-avatars.com)</td>
+    <td>Your display name, only if you haven't uploaded a profile photo</td>
+    <td>Generating a default initials avatar image</td>
+  </tr>
+  <tr>
     <td>Apple</td>
-    <td>Standard data collected by any iOS app distribution (device identifiers, crash logs at the OS level)</td>
-    <td>Required for App Store distribution — governed by Apple's own privacy policy</td>
+    <td>Standard data collected by any iOS app distribution (device identifiers, crash logs at the OS level), and approximate location when converting it into a place name or country</td>
+    <td>Required for App Store distribution, and Apple's built-in location services — governed by Apple's own privacy policy</td>
   </tr>
 </table>
 <p>
