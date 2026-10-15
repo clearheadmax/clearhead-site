@@ -67,7 +67,7 @@
   </tr>
   <tr>
     <td>Location data</td>
-    <td>Your device's location, used to show nearby people and venues. Before it leaves your device it is rounded to an approximate location (about 1 km). We store only this approximate location on your profile and on Moments you post, and a Moment may also show a general area label like "Helsinki, Finland" if you don't tag a specific venue. Other users can see roughly how far away you are, never your exact location.</td>
+    <td>Your device's location, used to show nearby people and venues. For people and Moments it is rounded to an approximate location (about 1 km) before it leaves your device: we store only this approximate location on your profile and on Moments you post, and a Moment may also show a general area label like "Helsinki, Finland" if you don't tag a specific venue. Other users can see roughly how far away you are, never your exact location. To find venues right around you, the app sends a more precise location (rounded to about 100 m) to Google Places only; we never store or share that one.</td>
   </tr>
   <tr>
     <td>Photos</td>
@@ -75,7 +75,7 @@
   </tr>
   <tr>
     <td>Social/relationship data</td>
-    <td>Connections between you and other users, events you host or mark interest in, drinks you favorite, venues you save, and community tags you or others apply to venues.</td>
+    <td>Connections between you and other users, events you host or mark interest in, drinks you favorite, venues you save, community tags you or others apply to venues, comments you write on Moments, Moments you repost, and friends you tag in your Moments (only your accepted connections can be tagged, and anyone can remove a tag of themselves).</td>
   </tr>
   <tr>
     <td>Content</td>
@@ -118,7 +118,7 @@
   </tr>
   <tr>
     <td>Google (Places API)</td>
-    <td>Approximate location (about 1 km) and any search text when you browse or search Venues</td>
+    <td>Your location rounded to about 100 m, and any search text, when you browse or search Venues (not stored by Clearhead)</td>
     <td>Finding real nearby bars, cafes, and restaurants</td>
   </tr>
   <tr>
@@ -130,6 +130,11 @@
     <td>UI Avatars (ui-avatars.com)</td>
     <td>Your display name, only if you haven't uploaded a profile photo</td>
     <td>Generating a default initials avatar image</td>
+  </tr>
+  <tr>
+    <td>Anthropic (Claude AI)</td>
+    <td>Venue menus: the menu pages or PDFs from a venue's own website, and menu photos people choose to scan in the app. No account details, profile or location.</td>
+    <td>Reading menus to list the alcohol-free drinks on venue pages. Anthropic does not use this data to train its models.</td>
   </tr>
   <tr>
     <td>Apple</td>
